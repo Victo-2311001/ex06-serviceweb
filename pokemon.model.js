@@ -1,4 +1,4 @@
-import sql from './src/config/dp_pg.js';
+import db from './src/config/dp_pg.js';
 
 //Requete qui vas chercher un pokemon selon son id
 function recupererIdPokemon(id, callback){

@@ -4,7 +4,7 @@ import { recupererIdPokemon, recupererPageListee, creerPokemon } from "./pokemon
 //Fonction pour récuperer le ID du pokemon et l'afficher apres  
 const getIdPokemon = (req, res) => {
     //Récuperer le ID
-    const idPokemon = req.query.idPokemon;
+    const idPokemon = req.params.id;
 
     //Si il n'a pas de code de idPokemon définit (sans le ?idPokemon = ) 
     if (!idPokemon){

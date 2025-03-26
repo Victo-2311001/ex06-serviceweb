@@ -8,8 +8,8 @@ router.get('/', (req, res) => {
     res.send("<h1>Bienvenue à mon Pokemon World API</h1>");
 })
 
-router.get('/pokemon', getIdPokemon);
 router.get('/pokemon/liste', getListPokemons)
+router.get('/pokemon/:id', getIdPokemon)
 router.post('/pokemon/ajouter', addPokemon)
 
 //On exporte le router pour pouvoir l'utiliser dans index.js
