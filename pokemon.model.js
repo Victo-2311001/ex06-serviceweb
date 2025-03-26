@@ -2,7 +2,7 @@ import sql from './src/config/dp_pg.js';
 
 //Requete qui vas chercher un pokemon selon son id
 function recupererIdPokemon(id, callback){
-    const requete = `SELECT * FROM public.pokemon where id = $`;
+    const requete = `SELECT * FROM public.pokemon where id = $1`;
 
     db.query(requete, [id], (erreur, resultats) => {
         if(erreur){
@@ -19,7 +19,7 @@ function recupererPageListee(type, limit, offset, callback){
 
     //Si type est definit, la requexte vas chercher une liste de pokemons avec ce meme type
     if(type){
-        requete = 'SELECT * FROM public.pokemon WHERE type_primaire = $ LIMIT $ OFFSET $';
+        requete = 'SELECT * FROM public.pokemon WHERE type_primaire = $1 LIMIT $2 OFFSET $3';
         params = [type, limit, offset]; 
 
         db.query(requete, params, (erreur, resultats) => {
