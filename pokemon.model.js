@@ -30,7 +30,7 @@ function recupererPageListee(type, limit, offset, callback){
         }); 
     }else{  
         //Si non, la requete vas chercher une liste avec toute les pokemons
-        requete = 'SELECT * FROM public.pokemon LIMIT $ OFFSET $;';
+        requete = 'SELECT * FROM public.pokemon LIMIT $2 OFFSET $3;';
         params = [limit, offset];
 
         db.query(requete, params, (erreur, resultats) => {
