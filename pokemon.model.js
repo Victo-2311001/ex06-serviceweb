@@ -8,7 +8,7 @@ function recupererIdPokemon(id, callback){
         if(erreur){
             return callback(erreur);
         }  
-        return callback(null, resultats)
+        return callback(null, resultats.rows)
     }); 
 }
 
