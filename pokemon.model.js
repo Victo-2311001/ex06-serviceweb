@@ -31,7 +31,7 @@ function recupererPageListee(type, limit, offset, callback) {
         if (erreur) {
             return callback(erreur);
         }
-        return callback(null, resultats);
+        return callback(null, resultats.rows);
     });
 }
 
