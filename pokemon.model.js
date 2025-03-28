@@ -2,7 +2,7 @@ import db from './src/config/dp_pg.js';
 
 //Requete qui vas chercher un pokemon selon son id
 function recupererIdPokemon(id, callback){
-    const requete = `SELECT * FROM public.pokemon where id = $1`;
+    const requete = `SELECT nom FROM public.pokemon where id = $1`;
 
     db.query(requete, [id], (erreur, resultats) => {
         if(erreur){
